@@ -1893,6 +1893,10 @@
 				.icon.circle.fa-dribbble:hover {
 					background: #df93b8;
 				}
+			.icon.circle.fa-instagram {
+				background-color:#A1755C;
+				color: #fff;
+			}
 
 		.icon.featured {
 			cursor: default;
