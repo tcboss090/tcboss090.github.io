@@ -21,8 +21,6 @@
         <header id="header" class="alt">
           <h1 id="logo"><a href="index.html">Austin <span>by Boss</span></a></h1>
           <nav id="nav">
-
-
             <ul>
               <li class="current"><a href="index.html">Welcome</a></li>
               <li class="submenu">
@@ -33,7 +31,8 @@
                   <li><a href="no-sidebar.html">No Sidebar</a></li> -->
                   <li><a href="contact.html">Contact</a></li>
                   <li><a href="mywork.html">My Work</a></li>
-                  <li class="submenu">
+                  <li><a href="resume.html">Resume</a></li>
+                  <!--<li class="submenu">
                     <a href="#">Submenu</a>
                     <ul>
                       <li><a href="#">Sub Menu1</a></li>
@@ -41,13 +40,12 @@
                       <li><a href="#">Sub Menu3</a></li>
                       
                     </ul>
-                  </li>
+                  </li> -->
                 </ul>
               </li>
              <!-- <li><a href="#" class="button special">Sign Up</a></li> -->
             </ul>
           </nav>
-        </header>
         </header>
 
       <!-- Main -->
@@ -71,14 +69,49 @@
              </header>
              <div>
 
-             <object data="Resumetemplate.pdf" type="application/pdf" width="100%" height="100%"  >
+              <script type="text/javascript">
+      /* -*- Mode: Java; tab-width: 2; indent-tabs-mode: nil; c-basic-offset: 2 -*- */
+      /* vim: set shiftwidth=2 tabstop=2 autoindent cindent expandtab: */
+
+      //
+      // See README for overview
+      //
+
+                      'use strict';
+
+                      getPdf('Resumetemplate.pdf', function getPdfHelloWorld(data) {
+                          //
+                          // Instantiate PDFDoc with PDF data
+                          //
+                          var pdf = new PDFDoc(data);
+                          var page = pdf.getPage(1);
+                          var scale = 1.5;
+
+                          //
+                          // Prepare canvas using PDF page dimensions
+                          //
+                          var canvas = document.getElementById('the-canvas');
+                          var context = canvas.getContext('2d');
+                          canvas.height = page.height * scale;
+                          canvas.width = page.width * scale;
+
+                          //
+                          // Render PDF page into canvas context
+                          //
+                          page.startRendering(context);
+                      });
+
+
+             </script>
+
+             <!--<object data="Resumetemplate.pdf" type="application/pdf" width="100%" height="100%"  >
 
                   <p  >It appears you don't have a PDF plugin for this browser.
                   You can <a href="Resumetemplate.pdf"  > also click here to
                   download the PDF file.</a></p>
 
-                </object>
-             </div>
+                </object> -->
+              </div>
 
          
 
